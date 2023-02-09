@@ -5,6 +5,7 @@ import { z } from 'zod'
 import loreumNftAbi from '../abis/loreum-nft.json'
 
 const loreumNftAddress = '0x0000000000000000'
+// const loreumNftAddress = import.meta.env.LOREUM_NFT_ADDRESS
 
 const useContractMethods = () => {
   const signer = useRef<null | Signer>(null)
