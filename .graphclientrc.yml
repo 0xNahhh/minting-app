@@ -1,0 +1,9 @@
+# .graphclientrc.yml
+sources:
+  - name: loreum-nft
+    handler:
+      graphql:
+        endpoint: https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v2
+
+documents:
+  - ./src/subgraph/subgraph.graphql

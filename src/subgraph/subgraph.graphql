@@ -1,0 +1,47 @@
+query getApprovalTxs($filter: ApprovalTx_filter) {
+  approvalTxs(first: 50, where: $filter) {
+    id
+    owner
+    approved
+    tokenId
+    timestamp
+  }
+}
+
+query getApprovalForAllTxs($filter: ApprovalForAllTx_filter) {
+  approvalForAllTxs(first: 50, where: $filter) {
+    id
+    owner
+    operator
+    approved
+    timestamp
+  }
+}
+
+query getMintCostUpdatedTxs($filter: MintCostUpdatedTx_filter) {
+  mintCostUpdatedTxs(first: 50, where: $filter) {
+    id
+    oldMintCost
+    newMintCost
+    timestamp
+  }
+}
+
+query getOwnershipTransferredTxs($filter: OwnershipTransferredTx_filter) {
+  ownershipTransferredTxs(first: 50, where: $filter) {
+    id
+    previousOwner
+    newOwner
+    timestamp
+  }
+}
+
+query getTransferTxs($filter: TransferTx_filter) {
+  transferTxs(first: 50, where: $filter) {
+    id
+    from
+    to
+    tokenId
+    timestamp
+  }
+}
